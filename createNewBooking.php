@@ -6,18 +6,18 @@ $bd = $_POST['bookingDate'];
 $st = $_POST['startTime']; 
 $et = $_POST['endTime']; 
 
-include("dbcon.php");
+include("Dbconn.php");
 
 $sql = "insert into booking(memberid,courtid,bookingDate,starttime,endtime) values ('$mid','$cid','$bd','$st','$et')";
 
-echo $sql;
-/*
+//echo $sql;
+
 if (mysqli_query($conn, $sql)) {
   echo "<br>New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-*/
+
 
 mysqli_close($conn); 
 ?>
